@@ -136,6 +136,8 @@ const normalizeFlags purell.NormalizationFlags = purell.FlagRemoveDefaultPort |
 // 6. Decode host IP into decimal numbers.
 // 7. Handle escape values.
 // 8. Decode Punycode domains into UTF8 representation.
+// 9. Remove unnecessary trailing slash.
+
 func Normalize(u *url.URL) (string, error) {
 	host, port, err := SplitHostPort(u)
 	if err != nil {
