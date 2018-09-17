@@ -124,7 +124,7 @@ const normalizeFlags purell.NormalizationFlags = purell.FlagRemoveDefaultPort |
 	purell.FlagDecodeDWORDHost | purell.FlagDecodeOctalHost | purell.FlagDecodeHexHost |
 	purell.FlagRemoveUnnecessaryHostDots | purell.FlagRemoveDotSegments | purell.FlagRemoveDuplicateSlashes |
 	purell.FlagUppercaseEscapes | purell.FlagDecodeUnnecessaryEscapes | purell.FlagEncodeNecessaryEscapes |
-	purell.FlagSortQuery
+	purell.FlagSortQuery | purell.FlagRemoveTrailingSlash
 
 // Normalize returns normalized URL string.
 // Behavior:
