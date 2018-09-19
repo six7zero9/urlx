@@ -120,11 +120,11 @@ func SplitHostPort(u *url.URL) (host, port string, err error) {
 	return host, port, nil
 }
 
-const normalizeFlags purell.NormalizationFlags = purell.FlagRemoveDefaultPort |
+const normalizeFlags purell.NormalizationFlags = purell.FlagRemoveTrailingSlash | purell.FlagRemoveDefaultPort |
 	purell.FlagDecodeDWORDHost | purell.FlagDecodeOctalHost | purell.FlagDecodeHexHost |
 	purell.FlagRemoveUnnecessaryHostDots | purell.FlagRemoveDotSegments | purell.FlagRemoveDuplicateSlashes |
 	purell.FlagUppercaseEscapes | purell.FlagDecodeUnnecessaryEscapes | purell.FlagEncodeNecessaryEscapes |
-	purell.FlagSortQuery | purell.FlagRemoveTrailingSlash
+	purell.FlagSortQuery
 
 // Normalize returns normalized URL string.
 // Behavior:
